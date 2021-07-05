@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Transition from 'react-transition-group/Transition';
+import React, { Component } from "react";
+import Transition from "react-transition-group/Transition";
 
-import './App.css';
-import Modal from './components/Modal/Modal';
-import Backdrop from './components/Backdrop/Backdrop';
-import List from './components/List/List';
+import "./App.css";
+import Modal from "./components/Modal/Modal";
+import Backdrop from "./components/Backdrop/Backdrop";
+import List from "./components/List/List";
 
 class App extends Component {
   state = {
@@ -20,7 +20,6 @@ class App extends Component {
     this.setState({ modalIsOpen: false });
   };
   render() {
-    console.log(this.state.showBlock);
     return (
       <div className="App">
         <h1>React Animations</h1>
@@ -42,12 +41,12 @@ class App extends Component {
           {(state) => (
             <div
               style={{
-                backgroundColor: 'red',
+                backgroundColor: "red",
                 width: 100,
                 height: 100,
-                margin: 'auto',
-                transition: 'opacity 1s ease-out',
-                opacity: state === 'exiting' ? 0 : 1,
+                margin: "auto",
+                transition: "opacity 1s ease-out",
+                opacity: state === "exiting" ? 0 : 1,
               }}
             ></div>
           )}
