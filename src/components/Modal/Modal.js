@@ -1,11 +1,11 @@
-import React from 'react';
-import './Modal.css';
-import CSSTransition from 'react-transition-group/CSSTransition';
+import React from "react";
+import "./Modal.css";
+import CSSTransition from "react-transition-group/CSSTransition";
 
 const modal = (props) => {
   const animationTiming = {
     enter: 400,
-    exit: 1000,
+    exit: 400,
   };
 
   return (
@@ -14,7 +14,14 @@ const modal = (props) => {
       timeout={animationTiming}
       mountOnEnter
       unmountOnExit
-      classNames="fade-slide"
+      classNames={{
+        enter: "",
+        enterActive: "ModalOpen",
+        exit: "",
+        exitActive: "ModalClosed",
+        appear: "",
+        appearActive: "",
+      }}
     >
       <div className="Modal">
         <h1>A Modal</h1>
